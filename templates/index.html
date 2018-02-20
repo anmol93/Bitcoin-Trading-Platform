@@ -1,0 +1,146 @@
+
+<html>
+
+<head>
+		<title>GDAX Web service</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+		<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename = 'mystyle.css') }}">
+		
+		<style>
+  .carousel-inner > .item > img,
+  .carousel-inner > .item > a > img {
+      width: 100%;
+      margin: auto;
+  }
+  </style>
+		
+</head>
+	
+<body>
+
+
+	<div class="nav">
+				
+		<nav class="navbar navbar-inverse navbar-fixed-top " style="background-color:#b30000;" >
+		  <div class="container-fluid">
+			<div class="navbar-header" >
+			 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>                        
+			  </button> 
+			  
+			  <!--<a class="navbar-brand" href="index.html"><img src="logo.jpg" class="img-rounded" alt="logo" width="200" height="30"></a>-->
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+			  <ul class="nav navbar-nav">
+				<li class="active"><a id="lc" href="#">Home</a></li>
+				<li><a id="lc" href="#">About us</a></li>
+				<li><a id="lc" href="#">Photos</a></li>
+				<li><a id="lc"href="#">Contact us</a></li>
+			  </ul>
+			  <ul class="nav navbar-nav navbar-right">
+				<li><a id="lc" href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+				<li><a id="lc" href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+			  </ul>
+			</div>
+		  </div>
+		</nav>
+	</div>	
+	
+
+
+		<div style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url(static/images/img1.jpg) no-repeat center center fixed; height:85%; font-family:Microsoft Jhenghei light;">
+		<div style="padding:7%;">
+			<br><br><br><br><br>
+		<p style="color:white; text-align:center;" id="big">Your Bitcoin, Your Way</p><br>
+		<ul style="color:white; font-size:2em; text-align:center;" id="medium">
+		Find instant quotes to buy or sell bitcoins
+		</div>
+      </div>
+		
+		
+		<div class="paths" style="background-color:white; padding:4% 3% 0% 3%;">
+<h1 id="medium" style="font-size:3em;">Find the best quotes and get great Value</h1><br>
+<p id="small" style="font-size:5em;"> 
+</p>
+</div>
+	    
+
+
+<div style="background-color:white">
+<div class="courses" style="padding:1em 5em 1em 4em;" >
+<a name="courses"></a><center><p id="big" style="color:#0066ff; font-size:5vmax;">Let's get Started</p></center>
+</div></div>
+
+		<div class="paths" style="background-color:white; padding:1% 3% 0% 3%;">
+<h1 id="medium" style="font-size:3em;">Choose the Values, enter the amount and hit submit</h1><br>
+<p id="small" style="font-size:5em;"> 
+</p>
+</div>
+
+
+<div class="container">
+<div class="row">
+
+<form method = "POST" action="http://127.0.0.1:5000/"> 
+
+<div class="col-md-4" style= "padding:1%;"><div class="inner"><h2 style="padding:10% 0%;">
+<h2>Choose buy or sell:<br>
+  <input type="radio" name="action" value="buy"> Buy<br>
+  <input type="radio" name="action" value="sell"> Sell<br>
+</h2>
+</div></div>
+
+<div class="col-md-4" style="padding:1%;"><div class="inner"><h2 style="padding:10% 0%;">
+<h2>Choose base Currency:<br>
+  <input type="radio" name="bc" value="BTC"> BTC<br>
+  <input type="radio" name="bc" value="USD"> USD<br>
+  <input type="radio" name="bc" value="EUR"> EUR<br>
+  <input type="radio" name="bc" value="GBP"> GBP<br>
+</h2>
+</div></div>
+
+<div class="col-md-4" style="padding:1%;"><div class="inner"><h2 style="padding:10% 0%;">
+<h2>Choose quote Currency:<br>
+  <input type="radio" name="qc" value="BTC"> BTC<br>
+  <input type="radio" name="qc" value="USD"> USD<br>
+  <input type="radio" name="qc" value="EUR"> EUR<br>
+  <input type="radio" name="qc" value="GBP"> GBP<br>
+</h2>
+</div></div>
+
+ 
+ <h2>Enter Amount:<br><br>
+ <input type="text" name="amount"></h2> <br> <input class="btn btn-info" type="submit" value="Submit">
+
+</form>
+
+
+</div></div>
+
+
+<div style="background: linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ) ,url(static/images/img1.jpg) no-repeat center center fixed; height:75%; font-family:Microsoft Jhenghei light;">
+		<div style="padding:6% 7% 10% 7%;">
+		<p style="color:white; text-align:center;" id="big">Why Invest in Bitcoin?</p><br>
+		<ul style="color:white; font-size:2em; text-align:center;" id="medium">
+		   The performance of Bitcoin as an investment speaks for itself – this year it has far outperformed any other asset or stock index you might have chosen to invest money in.<br>
+      </div>
+
+
+<div class="end">
+<h4>Bitcoin is the #FUTURE<br><br>	
+Proudly created with <span class="glyphicon glyphicon-heart"></span> by <a id="lc" href="developer.html"> Anmol Singh</a><span class="glyphicons glyphicons-heart-empty"></span>
+<br><br>
+Coinbase Take home activity</h4>
+</div>
+
+
+
+
+</body>
+</html>
