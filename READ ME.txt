@@ -25,10 +25,8 @@ Description of the code-
 
 Extra Comments:
 
-1. I couldn’t use the values of  base_min_size and base_max_size from GDAX API(https://api.gdax.com/products) to limit the values of amount of base currency, because the order book I was asked to use for my web service had only 50 bids and 50 asks as a result of using a level 2 query parameter to fetch aggregated order information. And so in cases where the demand of base currency is more than available by aggregating those 50 orders at that moment, the web service returns an error message suggesting that the trade  cannot be possible and gives the maximum value of amount of base currency that can be bought. 
+1. I couldnâ€™t use the values of  base_min_size and base_max_size from GDAX API(https://api.gdax.com/products) to limit the values of amount of base currency, because the order book I was asked to use for my web service had only 50 bids and 50 asks as a result of using a level 2 query parameter to fetch aggregated order information. And so in cases where the demand of base currency is more than available by aggregating those 50 orders at that moment, the web service returns an error message suggesting that the trade  cannot be possible and gives the maximum value of amount of base currency that can be bought. 
 
-2. If the web_service receives any Input for which a trade cannot be executed, an error message is returned with the reason of failure. 
+2. If the web_service receives any Input for which a trade cannot be executed, an error message is returned with the reason of failure.  
 
-3. I'd say it took me almost 3 hours to complete the code and test it against edge cases and errors. This also includes the time I had  to spend to understand more about base and quote currency, and trading platforms. I had some experience with trading stocks, so that knowledge definitely helped. GDAX really seems like an efficient trading platform. The API provided made fetching the JSON data for the assignment a lot easier. 
-
-4. I definitely tried to be as elaborate as possible, by adding comments. This was done to make the code more understandable, ofcourse. And so I can make the code more concise or elaborate, based upon the input given by the team i'm going to be working with, if chosen.
+4. I definitely tried to be as elaborate as possible, by adding comments. This was done to make the code more understandable, ofcourse.
